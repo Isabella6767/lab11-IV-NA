@@ -1,7 +1,42 @@
 import unittest
 from calculator import *
 
+# https://github.com/Isabella6767/lab11-IV-NA
+
 class TestCalculator(unittest.TestCase):
+    def test_add(self):
+        self.assertEqual(calculator.add(3, 4),7)
+
+    def test_subtract(self):
+         self.assertEqual(calculator.subtract(10, 3), 7)
+
+    def test_divide_by_zero(self):
+        with self.assertRaises(ZeroDivisionError):
+            calculator.divide(5,0)
+
+    def test_logarithm(self):
+        self.assertAlmostEqual(calculator.logarithe(10, 100), 2)
+
+    def test_log_invalid_base(self):
+        with self.assertRaises(ValueError):
+            calculator.logarithe(1,10)
+
+    def test_multiple(self):
+        self.assertEqual(calculator.multiple(3, 4), 12)
+
+    def test_divide(self):
+        self.assertEqual(calculator.divide(8, 2), 4)
+
+    def test_log_invalid_arguemnt(self):
+        with self.assertRaises(ValueError):
+            calculator.logarith(1, 10)
+
+    def test_hypotenuse(self):
+        self.assertAlmostEqual(calculator.hypotenuse(3, 4), 5)
+
+    def test_sqrt(self):
+        self.assertAlmostEqual(calculator.square_root(9), 3)
+
     ######### Partner 2
     # def test_add(self): # 3 assertions
     #     fill in code
@@ -54,3 +89,5 @@ class TestCalculator(unittest.TestCase):
 # Do not touch this
 if __name__ == "__main__":
     unittest.main()
+
+
