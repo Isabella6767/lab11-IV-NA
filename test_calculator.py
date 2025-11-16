@@ -1,7 +1,9 @@
-import unittest
-from calculator import *
-
 # https://github.com/Isabella6767/lab11-IV-NA
+# Partner 1: Isabella-Nicole Vassor
+# Partner 2: N/A :(
+
+import unittest
+import calculator
 
 class TestCalculator(unittest.TestCase):
     def test_add(self):
@@ -15,11 +17,11 @@ class TestCalculator(unittest.TestCase):
             calculator.divide(5,0)
 
     def test_logarithm(self):
-        self.assertAlmostEqual(calculator.logarithe(10, 100), 2)
+        self.assertAlmostEqual(calculator.logarithm(10, 100), 2)
 
     def test_log_invalid_base(self):
         with self.assertRaises(ValueError):
-            calculator.logarithe(1,10)
+            calculator.logarithm(1,10)
 
     def test_multiple(self):
         self.assertEqual(calculator.multiple(3, 4), 12)
@@ -29,7 +31,7 @@ class TestCalculator(unittest.TestCase):
 
     def test_log_invalid_arguemnt(self):
         with self.assertRaises(ValueError):
-            calculator.logarith(1, 10)
+            calculator.logarithm(1, 10)
 
     def test_hypotenuse(self):
         self.assertAlmostEqual(calculator.hypotenuse(3, 4), 5)

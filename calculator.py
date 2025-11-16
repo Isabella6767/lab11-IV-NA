@@ -1,6 +1,6 @@
-"""
-calculator.py
-- Defines functions used to create a simple calculator
+# https://github.com/Isabella6767/lab11-IV-NA
+# Partner 1: Isabella-Nicole Vassor
+# Partner 2: N/A :(
 
 
 import math
