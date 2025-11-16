@@ -10,28 +10,28 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calculator.add(3, 4),7)
 
     def test_subtract(self):
-         self.assertEqual(calculator.subtract(10, 3), 7)
+         self.assertEqual(calculator.sub(10, 3), 7)
 
     def test_divide_by_zero(self):
         with self.assertRaises(ZeroDivisionError):
-            calculator.divide(5,0)
+            calculator.div(5,0)
 
     def test_logarithm(self):
-        self.assertAlmostEqual(calculator.logarithm(10, 100), 2)
+        self.assertAlmostEqual(calculator.log(10, 100), 2)
 
     def test_log_invalid_base(self):
         with self.assertRaises(ValueError):
-            calculator.logarithm(1,10)
+            calculator.log(1,10)
 
     def test_multiple(self):
-        self.assertEqual(calculator.multiple(3, 4), 12)
+        self.assertEqual(calculator.mul(3, 4), 12)
 
     def test_divide(self):
-        self.assertEqual(calculator.divide(8, 2), 4)
+        self.assertEqual(calculator.div(8, 2), 4)
 
-    def test_log_invalid_arguemnt(self):
+    def test_log_invalid_argument(self):
         with self.assertRaises(ValueError):
-            calculator.logarithm(1, 10)
+            calculator.log(1, 10)
 
     def test_hypotenuse(self):
         self.assertAlmostEqual(calculator.hypotenuse(3, 4), 5)
